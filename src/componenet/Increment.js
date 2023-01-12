@@ -15,7 +15,7 @@ class Increment extends Component {
   };
   render() {
     return (
-      <div className="App">
+      <div>
         <h1> Simple Counter </h1>
         <h4>Topics covered:</h4>
         <p>React class-based components, props, state.</p>
