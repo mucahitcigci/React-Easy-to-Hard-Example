@@ -15,6 +15,9 @@ function Home() {
         Go To Search Filter
       </button>
       <hr />
+      <button className="search-button" onClick={() => navigate("/quiz")}>
+        Start Solving The Quiz
+      </button>
     </div>
   );
 }
