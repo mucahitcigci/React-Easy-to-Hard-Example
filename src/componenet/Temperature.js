@@ -26,7 +26,6 @@ const Temperature = () => {
     <div className="row">
       <div className="col-sm subject">
         {" "}
-        <h1>Temperature Control App</h1>
         <h5>Summary</h5>
         <p>
           {" "}
@@ -45,8 +44,12 @@ const Temperature = () => {
             </div>
           </div>
           <div className="button-container">
-            <button onClick={() => increaseTemperature()}>+</button>
-            <button onClick={() => decreaseTemperature()}>-</button>
+            <button className="counter" onClick={() => increaseTemperature()}>
+              +
+            </button>
+            <button className="counter" onClick={() => decreaseTemperature()}>
+              -
+            </button>
           </div>
         </div>
       </div>

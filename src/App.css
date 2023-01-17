@@ -38,7 +38,7 @@ body {
   transition: background 0.5s;
 }
 
-button {
+.counter {
   border-radius: 100px;
   height: 80px;
   width: 80px;
@@ -48,12 +48,12 @@ button {
   border: 2px #ffffff solid;
 }
 
-button:hover {
+.counter:hover {
   background: rgb(184, 184, 184);
   cursor: pointer;
 }
 
-button:focus {
+.counter:focus {
   outline: 0;
 }
 
@@ -79,4 +79,15 @@ button:focus {
 }
 .subject h5 {
   color: #ff5200;
+}
+.search-button {
+  border-radius: 10px;
+  font-size: 32px;
+  color: #ffffff;
+  background: rgb(105, 104, 104);
+  border: 2px #ffffff solid;
+}
+.search-button:hover {
+  background: rgb(184, 184, 184);
+  cursor: pointer;
 }

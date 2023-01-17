@@ -1,17 +1,17 @@
+import React from "react";
 import "./App.css";
-import Increment from "./componenet/Increment";
-import Temperature from "./componenet/Temperature";
-
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DataApi from "./pages/DataApi";
 function App() {
   return (
-    <div className="container">
-      <Increment />
-      <hr />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <hr />
-      <Temperature />
-    </div>
+        <Route path="/dataApi" element={<DataApi />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
 export default App;
