@@ -6,6 +6,12 @@ function DataApi() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="container">
+      <h2>Search Filter</h2>
+      <h3>Summary</h3>
+      <p>
+        Topics covered: React components, useState(), using controlled HTML
+        input field in React.
+      </p>
       <div className="data-api">
         <input
           className="search-input"
