@@ -3,6 +3,7 @@ import "./QuizApp.css";
 
 import Confetti from "react-confetti";
 import { render } from "@testing-library/react";
+import HomeButton from "../componenet/HomeButton";
 
 export default function QuizApp() {
   const questions = [
@@ -64,46 +65,55 @@ export default function QuizApp() {
     window.location.reload();
   };
   return (
-    <div className="app">
-      {showScore ? (
-        <div>
-          {score >= 3 ? (
-            <Confetti className="confeti" />
-          ) : (
-            <p>You did not pass the average of success &#128532; </p>
-          )}
-          <div className="score-section">
-            You scored {score} out of {questions.length}
-          </div>
+    <div className="">
+      <HomeButton />
+      <div className="app">
+        {showScore ? (
           <div>
-            <button type="simpleQuery" onClick={refreshPage} className="again">
-              {" "}
-              Back to Test{" "}
-            </button>
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="question-section">
-            <div className="question-count">
-              <span>Question {currentQuestion + 1}</span>/{questions.length}
+            {score >= 3 ? (
+              <Confetti className="confeti" />
+            ) : (
+              <p>You did not pass the average of success &#128532; </p>
+            )}
+            <div className="score-section">
+              You scored {score} out of {questions.length}
             </div>
-            <div className="question-text">
-              {questions[currentQuestion].questionText}
-            </div>
-          </div>
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
+            <div>
               <button
-                className="quiz-button"
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
+                type="simpleQuery"
+                onClick={refreshPage}
+                className="again"
               >
-                {answerOption.answerText}
+                {" "}
+                Back to Test{" "}
               </button>
-            ))}
+            </div>
           </div>
-        </>
-      )}
+        ) : (
+          <>
+            <div className="question-section">
+              <div className="question-count">
+                <span>Question {currentQuestion + 1}</span>/{questions.length}
+              </div>
+              <div className="question-text">
+                {questions[currentQuestion].questionText}
+              </div>
+            </div>
+            <div className="answer-section">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <button
+                  className="quiz-button"
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answerText}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

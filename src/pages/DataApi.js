@@ -2,10 +2,12 @@ import React from "react";
 import JSONDATA from "../MOCK_DATA.json";
 import { useState } from "react";
 import "./DataApi.css";
+import HomeButton from "../componenet/HomeButton";
 function DataApi() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="container">
+      <HomeButton />
       <h2>Search Filter</h2>
       <h3>Summary</h3>
       <p>
