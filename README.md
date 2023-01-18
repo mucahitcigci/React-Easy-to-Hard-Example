@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Hello guys. React topics covered in this project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- React class-based components, props, state.
+- React basics like Hooks, components, useState().
+- Using controlled HTML input field in React.
+- [MockData] (https://www.mockaroo.com/)
 
 ## Available Scripts
 
