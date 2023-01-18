@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./QuizApp.css";
-
 import Confetti from "react-confetti";
-import { render } from "@testing-library/react";
 import HomeButton from "../componenet/HomeButton";
 
 export default function QuizApp() {
